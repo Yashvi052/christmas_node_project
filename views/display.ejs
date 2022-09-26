@@ -1,0 +1,22 @@
+<% if (db_rows_array.length>0) { %>
+    <table border="1">
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quality</th>
+            <th>Product Offer</th>
+        </tr>
+        <% for(var i=0; i<db_rows_array.length;i++) { %>
+        <tr>
+            <td><%= db_rows_array[i].product_id %></td>
+            <td><%= db_rows_array[i].product_name %></td>
+            <td><%= db_rows_array[i].product_price %></td>
+            <td><%= db_rows_array[i].product_quality %></td>
+            <td><%= db_rows_array[i].product_offer %></td>
+        </tr>
+    <% } %>
+    </table> 
+    <% } else { %>
+        No record Found
+    <% } %>
